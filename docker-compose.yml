@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  shop_client-front:
+    build: ./client
+    container_name: shop_client-front
+    command: "npm run start"
+    stdin_open: true
+    tty: true
+    ports:
+      - 3000:3000
+    networks:
+      - shop-network-external
+
+networks:
+  shop-network-external:
+    name: shop-network-external
+    external: true
