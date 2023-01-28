@@ -14,5 +14,4 @@ services:
 
 networks:
   shop-network-external:
-    name: shop-network-external
     external: true
